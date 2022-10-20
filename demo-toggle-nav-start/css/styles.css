@@ -1,0 +1,116 @@
+/* Colour Palette
+    brownish Orange : #C56923;
+   Brighter orange    :F47030;
+    pumpkin puree    : #F2B473;
+    that deep deep purple: #1D0525;
+*/
+
+body {
+    font-family: sans-serif;
+    background-color: #1D0525;
+    color: #F2B473;
+}
+
+/* Helper Classes */
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+.inner-container{
+    margin:auto;
+    justify-content: space-between;
+}
+
+/* Header & Nav */
+header{
+    background-color: #F47030;
+}
+
+header .flex-container{
+    padding: 1rem;
+}
+
+header a{
+    color: #111;
+    display: block;
+    text-decoration: none;
+}
+header a:hover{
+    color: #923ead;
+    font-weight: 600;
+    letter-spacing: .125rem;
+}
+.menu li {
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+main section{
+    padding: 3rem;
+    text-align: center;
+}
+main h2{
+    font-size: 3rem;
+}
+.menu li:hover {
+background-color: #d65210;
+}
+
+/* toggle button */
+
+.toggle-btn{
+    background-color: #F47030;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toggle-btn span{
+    font-size:.8rem;
+}
+
+.toggle-btn:hover svg rect, .toggle-btn:hover span{
+    fill: #fff;
+    color: #fff;
+}
+
+/* men functionality */
+
+header nav{
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+}
+
+.shazam{
+    visibility: visible;
+    background-color: #F47030;
+}
+/* Media Query */
+
+@media screen and (min-width: 50rem) {
+    .toggle-btn{
+        display: none;
+    }
+    header nav{
+        position: static;
+        max-height: unset;
+        width: auto;
+        visibility: visible;
+    }
+    .menu,
+    header .inner-container{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu li{
+        margin-right: 1rem;
+    }
+
+    .menu li:hover{
+        background-color: unset;
+    }
+}
